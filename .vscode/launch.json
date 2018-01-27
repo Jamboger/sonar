@@ -1,0 +1,36 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Flash",
+			"type": "fdb",
+			"request": "launch",
+			"program": "${workspaceRoot}/export/flash/bin/Sonar.swf"
+		},
+		{
+			"name": "Flash (+rebuild)",
+			"type": "fdb",
+			"request": "launch",
+			"program": "${workspaceRoot}/export/flash/bin/Sonar.swf",
+			"preLaunchTask": "flash debug (build only)"
+		},
+		{
+			"name": "Windows",
+			"type": "hxcpp",
+			"request": "launch",
+			"program": "${workspaceRoot}/export/windows/cpp/bin/Sonar.exe"
+		},
+		{
+			"name": "Linux",
+			"type": "hxcpp",
+			"request": "launch",
+			"program": "${workspaceRoot}/export/linux64/cpp/bin/Sonar"
+		},
+		{
+			"name": "Mac",
+			"type": "hxcpp",
+			"request": "launch",
+			"program": "${workspaceRoot}/export/mac64/cpp/bin/Sonar.app/Contents/MacOS/Sonar"
+		}
+	]
+}
