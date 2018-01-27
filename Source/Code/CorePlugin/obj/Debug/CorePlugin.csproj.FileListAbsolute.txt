@@ -1,0 +1,17 @@
+C:\Users\Jamie\Documents\test\Source\Code\CorePlugin\bin\Debug\GamePlugin.core.dll
+C:\Users\Jamie\Documents\test\Source\Code\CorePlugin\bin\Debug\GamePlugin.core.pdb
+C:\Users\Jamie\Documents\test\Source\Code\CorePlugin\bin\Debug\GamePlugin.core.xml
+C:\Users\Jamie\Documents\test\Source\Code\CorePlugin\bin\Debug\Duality.dll
+C:\Users\Jamie\Documents\test\Source\Code\CorePlugin\bin\Debug\DualityPrimitives.dll
+C:\Users\Jamie\Documents\test\Source\Code\CorePlugin\bin\Debug\NVorbis.dll
+C:\Users\Jamie\Documents\test\Source\Code\CorePlugin\bin\Debug\FarseerDuality.dll
+C:\Users\Jamie\Documents\test\Source\Code\CorePlugin\bin\Debug\Duality.pdb
+C:\Users\Jamie\Documents\test\Source\Code\CorePlugin\bin\Debug\Duality.xml
+C:\Users\Jamie\Documents\test\Source\Code\CorePlugin\bin\Debug\DualityPrimitives.pdb
+C:\Users\Jamie\Documents\test\Source\Code\CorePlugin\bin\Debug\DualityPrimitives.xml
+C:\Users\Jamie\Documents\test\Source\Code\CorePlugin\bin\Debug\NVorbis.xml
+C:\Users\Jamie\Documents\test\Source\Code\CorePlugin\bin\Debug\FarseerDuality.pdb
+C:\Users\Jamie\Documents\test\Source\Code\CorePlugin\bin\Debug\FarseerDuality.xml
+C:\Users\Jamie\Documents\test\Source\Code\CorePlugin\obj\Debug\CorePlugin.csproj.CoreCompileInputs.cache
+C:\Users\Jamie\Documents\test\Source\Code\CorePlugin\obj\Debug\GamePlugin.core.dll
+C:\Users\Jamie\Documents\test\Source\Code\CorePlugin\obj\Debug\GamePlugin.core.pdb
