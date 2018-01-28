@@ -96,7 +96,7 @@ namespace YourFirstProject
     }
 
     [RequiredComponent(typeof(RigidBody))]
-    public class Player : Component, ICmpUpdatable
+    public class Player : Component, ICmpUpdatable, ICmpCollisionListener
     {
         public Vector3 FiringOffset { get; set; } = new Vector3(0, -40, 0);
 
@@ -106,6 +106,9 @@ namespace YourFirstProject
 
         public ContentRef<Prefab> Particles { get; set; }
         public Transform cameraTransform { get; set; }
+        public ContentRef<Scene> creditsScene { get; set; }
+
+        public GameObject obstacle { get; set; }
 
         public float FiringDelay { get; set; } = 10;
 
@@ -145,6 +148,34 @@ namespace YourFirstProject
 
                     Scene.Current.AddObject(particle);
                 }
+            }
+        }
+        public void OnCollisionBegin(Component sender, CollisionEventArgs args)
+        {
+            var rigidBodyArgs = args as RigidBodyCollisionEventArgs;
+            if (rigidBodyArgs != null && rigidBodyArgs.OtherShape.IsSensor) return;
+
+            if (args.CollideWith.FullName == obstacle.FullName)
+            {
+                Scene.Reload();
+                Scene.SwitchTo(creditsScene);
+            }
+        }
+        public void OnCollisionEnd(Component sender, CollisionEventArgs args)
+        {
+        }
+        public void OnCollisionSolve(Component sender, CollisionEventArgs args)
+        {
+        }
+    }
+    public class Credits : Component, ICmpUpdatable
+    {
+        public ContentRef<Scene> gameScene { get; set; }
+        public void OnUpdate()
+        {
+            if (DualityApp.Keyboard[Key.Space])
+            {
+                Scene.SwitchTo(gameScene);
             }
         }
     }
