@@ -47,12 +47,12 @@
     </Plugin>
     <Plugin id="LogView">
       <LogView>
-        <ShowMessages>false</ShowMessages>
+        <ShowMessages>true</ShowMessages>
         <ShowWarnings>false</ShowWarnings>
         <ShowErrors>true</ShowErrors>
-        <ShowCore>false</ShowCore>
-        <ShowEditor>false</ShowEditor>
-        <ShowGame>false</ShowGame>
+        <ShowCore>true</ShowCore>
+        <ShowEditor>true</ShowEditor>
+        <ShowGame>true</ShowGame>
         <AutoClear>true</AutoClear>
         <PauseOnError>true</PauseOnError>
       </LogView>

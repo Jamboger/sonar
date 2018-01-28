@@ -18,5 +18,6 @@
     <Package id="AdamsLair.Duality.Editor.Plugins.SceneView" version="2.0.13.0" />
     <Package id="AdamsLair.Duality.Editor.Plugins.PackageManagerFrontend" version="2.1.2.0" />
     <Package id="AdamsLair.Duality.Editor.Backend.DefaultOpenTK" version="2.0.6.0" />
+    <Package id="importjingles.Duality.Editor.Plugins.DualityExtendedAudioImporter" version="1.0.2.0" />
   </Packages>
 </PackageConfig>

@@ -21,17 +21,17 @@
             <ignoreParent dataType="Bool">false</ignoreParent>
             <parentTransform />
             <pos dataType="Struct" type="Duality.Vector3">
-              <X dataType="Float">41.89209</X>
-              <Y dataType="Float">0</Y>
+              <X dataType="Float">3.99788666</X>
+              <Y dataType="Float">342.3988</Y>
               <Z dataType="Float">0</Z>
             </pos>
             <posAbs dataType="Struct" type="Duality.Vector3">
-              <X dataType="Float">41.89209</X>
-              <Y dataType="Float">0</Y>
+              <X dataType="Float">3.99788666</X>
+              <Y dataType="Float">342.3988</Y>
               <Z dataType="Float">0</Z>
             </posAbs>
-            <scale dataType="Float">21.7450523</scale>
-            <scaleAbs dataType="Float">21.7450523</scaleAbs>
+            <scale dataType="Float">16.4425316</scale>
+            <scaleAbs dataType="Float">16.4425316</scaleAbs>
             <vel dataType="Struct" type="Duality.Vector3" />
             <velAbs dataType="Struct" type="Duality.Vector3" />
           </item>
@@ -59,7 +59,7 @@
               <lineAlign dataType="Enum" type="Duality.Alignment" name="Left" value="1" />
               <maxHeight dataType="Int">0</maxHeight>
               <maxWidth dataType="Int">0</maxWidth>
-              <sourceText dataType="String">     A GAME BY /n JAMES CORSCADDEN /n       AND /n  LUKE DONNELLEY</sourceText>
+              <sourceText dataType="String">     A GAME BY /n JAMES CORSCADDEN /n       AND /n  LUKE DONNELLEY /n/n    SOUNDS BY/n   PAUL MARLOW /n/n SPACE TO RESTART</sourceText>
               <wrapMode dataType="Enum" type="Duality.Drawing.FormattedText+WrapMode" name="Word" value="1" />
             </text>
             <visibilityGroup dataType="Enum" type="Duality.Drawing.VisibilityFlag" name="Group0" value="1" />

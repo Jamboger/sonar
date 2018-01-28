@@ -103,10 +103,14 @@ namespace YourFirstProject
         private float m_FiringDelayCounter = 11;
 
         private Vector3 cameraOffset = new Vector3(0, 0, -2000);
+        private double soundStart;
 
         public ContentRef<Prefab> Particles { get; set; }
         public Transform cameraTransform { get; set; }
         public ContentRef<Scene> creditsScene { get; set; }
+        public SoundEmitter sonarSound { get; set; }
+        public Transform arrow { get; set; }
+        public Transform finish { get; set; }
 
         public GameObject obstacle { get; set; }
 
@@ -117,6 +121,12 @@ namespace YourFirstProject
             cameraTransform.MoveTo(GameObj.Transform.Pos + cameraOffset);
             cameraTransform.Angle = GameObj.Transform.Angle;
             RigidBody body = this.GameObj.GetComponent<RigidBody>();
+
+            //pause sound code
+            if (sonarSound.Sources.ElementAt(0).Paused == false && (Time.MainTimer.TotalSeconds - soundStart > 5.50))
+            {
+                sonarSound.Sources.ElementAt(0).Paused = true;
+            }
 
             if (DualityApp.Keyboard[Key.Left])
                 body.ApplyLocalForce(-0.001f * body.Inertia);
@@ -146,9 +156,28 @@ namespace YourFirstProject
                     ParticleController particleController = particle.GetComponent<ParticleController>();
                     particleController.Creator = GameObj;
 
+                    //DualityApp.Sound.PlaySound(Sound.Beep);
+                    if (sonarSound.Sources.ElementAt(0).Paused == true)
+                    {
+                        sonarSound.Sources.ElementAt(0).Paused = false;
+                        soundStart = Time.MainTimer.TotalSeconds;
+                    }
+
                     Scene.Current.AddObject(particle);
                 }
             }
+
+            //code for arrow
+            Vector3 difference = arrow.GetLocalVector(finish.Pos) - arrow.Pos;
+            //Log.Game.Write(difference.ToString());
+            double angleDegrees = Math.Acos(difference.Y / difference.X);
+            double angleRads = (Math.PI / 180f) * angleDegrees;
+            //Log.Game.Write("degrees: " + angleDegrees.ToString());
+            Log.Game.Write("rads" + angleRads.ToString());
+            if(!Double.IsNaN(angleRads))
+                arrow.Angle = (float)angleRads + (float)Math.PI;
+            
+
         }
         public void OnCollisionBegin(Component sender, CollisionEventArgs args)
         {
